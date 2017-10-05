@@ -15,5 +15,11 @@ export class FeaturepostsComponent implements OnInit {
   onPostClick(){
    this.router.navigateByUrl('/post');
  }
+ onSecondPostClick(){
+   this.router.navigateByUrl('/secondpost')
+ }
+ onThirdPostClick(){
+   this.router.navigateByUrl('/empresa')
+ }
 
 }

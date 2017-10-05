@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
+declare let ga: Function;
 
 // Initialize the server
 import * as _ from 'parse';
@@ -13,5 +15,12 @@ Parse.serverURL = 'http://backcash.herokuapp.com/parse'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
+  }
 }

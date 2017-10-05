@@ -1,5 +1,5 @@
 .intro-2 {
-    background: url("https://files.slack.com/files-pri/T79HV0607-F7CP8FXSA/download/backcash_bg-blog.jpg")no-repeat center center;
+    background: url("/assets/background.jpg")no-repeat center center;
     background-size: cover;
 }
 .top-nav-collapse {
@@ -57,4 +57,10 @@ h6 {
 
 .example-margin {
   margin: 0 10px;
+}
+
+.alert {
+    font-size: .9em;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
 }
